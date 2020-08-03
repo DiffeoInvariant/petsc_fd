@@ -1,0 +1,2 @@
+#!/bin/sh
+cat tests/convergence_test_output | grep "Pointwise RMS Error : " | cut -f2- -d: | cut -c 2-
