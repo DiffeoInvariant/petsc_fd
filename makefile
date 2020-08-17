@@ -52,10 +52,10 @@ tests/test_convergence: tests/test_convergence.cc
 	@echo "*======================================================*"
 	@echo "Testing Laplacian convergence with four MPI processes:"
 	$(MPIEXEC) -n 4 ./tests/test_convergence -ksp_atol 1.0e-10 -ksp_rtol 0 -pc_type gamg > tests/convergence_test_output
-	@echo "Plotting the solution on the finest grid"
-	@tests/plot_convergence
-	@echo "Writing test report"
-	@tests/make_test_report.py
+	#@echo "Plotting the solution on the finest grid"
+	#@tests/plot_convergence
+	#@echo "Writing test report"
+	#@tests/make_test_report.py
 clean:
 	@$(RM) tests/plot*.plt
 
