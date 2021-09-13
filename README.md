@@ -14,7 +14,7 @@ in the form of a `MatShell`, which you can create in the `Assemble()` function i
 of a `PETSc` `Mat` and of the `fd::RectangularOperator` class. That way, when we apply the matrix in `operator()`, everything works as expected. You could
 also overload `operator()` itself, but you probably only want to do this if you cannot for whatever reason make a `MatShell` to do what you want
 (one possible reason could be that your implementation throws C++ exceptions that you don't necessarily want to trap inside your callback and convert
-to an appropriate `PetscErrorCode` return value, which must be done to guarantee that exceptions propagate beyond the C call boundary).
+to an appropriate `PetscErrorCode` return value, which must be done to guarantee that your exception isn't simply ignored at the C call boundary or worse).
 
 The library also contains utilities for performing tests with the method of manufactured solutions (see `fd::TestConvergence<>` in `include/Utils.h`),
 which is useful to check that you've implemented the discretization correctly in  `Assemble()` and applied the appropriate boundary conditions. We 
