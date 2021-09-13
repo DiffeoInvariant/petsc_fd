@@ -6,7 +6,3 @@ Finally, ```cd``` into ```petsc_fd``` and
 ```
 make PETSC_DIR=/your/petsc-dir PETSC_ARCH=your-petsc-arch
 ```
-If you want to run the tests and output a PDF report (instead of simply running them and printing the output to the terminal), you'll also need to download and install ```pytex``` from ```https://github.com/DiffeoInvariant/pytex```, ```cd``` into ```pytex```, then
-```
-sudo python3 setup.py install
-```
